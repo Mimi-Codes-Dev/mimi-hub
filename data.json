@@ -106,7 +106,7 @@
     },
     {
         "title": "GPT-6 (Spud)：傳聞中的 Agentic 革命 🤖",
-        "desc": "雖然 OpenAI 尚未官方發布，但傳聞代號為「Spud」的 GPT-6 旨在全面轉向 Agentic Workflows。據傳性能比 GPT-5.4 提升約 40%，上下文視窗可達 200 萬 token，並可能與 Codex 和瀏覽器整合為「超級應用」。🦐",
+        "desc": "傳聞代號為「Spud」的 GPT-6 旨在全面轉向 Agentic Workflows。最新消息指其 Pre-training 已於 3 月完成，Altman 曾暗示「數週內」發布。市場預期發佈時間在 2026 年 4 月底至 5 月初，性能預計比 GPT-5.4 提升 40% 且支援 200 萬 token 視窗。🦐",
         "link": "https://felloai.com/all-we-know-about-chatgpt-6/",
         "tag": "tech",
         "date": "2026-04-20T00:00"
