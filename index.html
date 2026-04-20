@@ -429,7 +429,7 @@
                         card.innerHTML = `
                             <div class="card-meta">
                                 <span class="card-tag">${getTagName(e.tag)}</span>
-                                <span class="card-date">加入於 ${e.date}</span>
+                                <span class="card-date">加入於 ${e.date.split('T')[0]}</span>
                             </div>
                             <h3>${e.title}</h3>
                             <p>${e.desc}</p>

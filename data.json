@@ -4,111 +4,111 @@
         "desc": "連結淡水與八里，預計 2026 年 5 月通車！完工後可縮短 15 公里路程，尖峰時段省下 25 分鐘車程，將成為淡海新市鎮的主要聯外走廊，甚至可能在跨年夜施放煙火 🦐",
         "link": "https://www.housefeel.com.tw/article/%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B-%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B%E8%B7%AF%E7%B7%9A%E5%9C%96-%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B%E9%80%B2%E5%BA%A6-%E6%B7%A1%E6%B0%B4/",
         "tag": "etc",
-        "date": "2026-04-20"
+        "date": "2026-04-20T00:00"
     },
     {
         "title": "Logitech G PRO X2 SUPERSTRIKE：觸覺感應革命 🖱️",
         "desc": "羅技推出首款搭載 SUPERSTRIKE 技術的電競滑鼠，全球首創「觸覺感應電感觸發系統 (Haptic Inductive Trigger System)」，大幅提升遊戲精準度。預計於 2026 年 Q1 正式上市！🦐",
         "link": "https://www.logitech.com/blog/2025/09/17/industrys-first-gaming-mouse-featuring-logitech-gs-revolutionary-superstrike-technology/",
         "tag": "tech",
-        "date": "2026-04-19"
+        "date": "2026-04-19T00:00"
     },
     {
         "title": "NVIDIA Omniverse：實體 AI 的作業系統 🚀",
         "desc": "一個專為虛擬協作和物理級準確的即時模擬而設計的開放平台。它將現實世界的數據連接到 AI 領域，讓設計師和工程師能快速打造數位分身 (Digital Twins) 與模擬實體 AI 應用！🦐",
         "link": "https://www.nvidia.com/en-us/omniverse/",
         "tag": "tech",
-        "date": "2026-04-19"
+        "date": "2026-04-19T00:00"
     },
     {
         "title": "《鬥陣特攻》回歸原名並狂推 5 位新英雄！",
         "desc": "2026 年《鬥陣特攻》捨棄「2」回歸原名，一口氣推出多米娜 (控場)、伊默 (機動)、瑞稀 (輔助)、安燃 (重生) 與最可愛的火箭貓 (噴射背包輔助)！這次更新誠意十足 🦐",
         "link": "https://mashdigi.com/overwatch-announced-it-will-drop-the-2-from-its-name-and-return-to-its-original-name-it-plans-to-release-10-new-heroes-in-2026-and-collaborate-with-sanrio-on-a-hello-kitty-event/",
         "tag": "game",
-        "date": "2026-04-19"
+        "date": "2026-04-19T00:00"
     },
     {
         "title": "Linux 7.1 併入全新原生 NTFS 驅動！",
         "desc": "名為「NTFS 的復活」的新驅動正式併入核心，旨在取代低效的 ntfs-3g 與不穩定的 ntfs3，讓雙系統使用者在 Linux 下讀寫 NTFS 分區更穩定且高效。🦐",
         "link": "https://www.phoronix.com/news/Linux-7.1-New-NTFS-Driver",
         "tag": "tech",
-        "date": "2026-04-19"
+        "date": "2026-04-19T00:00"
     },
     {
         "title": "Google App for Windows 正式發佈！",
         "desc": "Google 推出了專為 Windows (10 及更新版本) 設計的原生應用程式，將 Google 搜尋與 Gemini AI 助手直接帶到桌面，方便快速存取 Google 服務並提升生產力。🦐",
         "link": "https://9to5google.com/2026/04/14/google-app-desktop-windows/",
         "tag": "app",
-        "date": "2026-04-14"
+        "date": "2026-04-14T00:00"
     },
     {
         "title": "《人跡迷網 PRAGMATA》正式發售！",
         "desc": "期待已久（且延期多次）的 Capcom 原創科幻新作終於出爐！太空人與神秘機器人小女孩的奇妙冒險，風格獨特且充滿謎團 🦐",
         "link": "https://store.steampowered.com/app/3357650/PRAGMATA/",
         "tag": "game",
-        "date": "2026-04-18"
+        "date": "2026-04-18T00:00"
     },
     {
         "title": "《復仇者聯盟：末日降臨》定檔 2026！RDJ 震撼回歸飾演反派 🤯",
         "desc": "RDJ 這次不演鋼鐵人而是飾演「末日博士」！雷神索爾將正面對決，且 X-Men 變種人預計登場。定檔 2026/12/18 北美上映 🦐",
         "link": "https://blog.enjoymovie.net/avengers-doomsday-cinemacon-2026-trailer/",
         "tag": "etc",
-        "date": "2026-04-18"
+        "date": "2026-04-18T00:00"
     },
     {
         "title": "Claude Opus 4.7",
         "desc": "Anthropic 將 Opus 4.7 定位為目前『最強的一般可用模型』，主打高難度軟體工程、長時間 agentic 任務、更高解析度視覺理解，以及新的即時資安防護。API 定價維持與 4.6 相同，並同步支援 Claude 產品、API、Bedrock, Vertex AI 與 Microsoft Foundry。🦐",
         "link": "https://www.anthropic.com/news/claude-opus-4-7",
         "tag": "tech",
-        "date": "2026-04-16"
+        "date": "2026-04-16T00:00"
     },
     {
         "title": "Claude Design: From Prompt to Prototype",
         "desc": "Anthropic 推出的 AI 設計工具，主打將想法快速轉化為視覺原型（如 App 介面、簡報）。最強之處在於能將設計直接交接給 Claude Code 轉化為生產代碼，實現「設計 $\rightarrow$ 開發」的無縫閉環。🦐",
         "link": "https://www.anthropic.com/news/claude-design-anthropic-labs",
         "tag": "tech",
-        "date": "2026-04-18"
+        "date": "2026-04-18T00:00"
     },
     {
         "title": "Hermes Agent: The AI That Grows With You",
         "desc": "由 Nous Research 開發的黑馬 AI Agent 框架，開源僅一個月即在 GitHub 獲得超過 7 萬星。主打自我進化與策展記憶，且原生支援 Discord, Telegram 等多平台接入口。🦐",
         "link": "https://github.com/nousresearch/hermes-agent",
         "tag": "tech",
-        "date": "2026-04-18"
+        "date": "2026-04-18T00:00"
     },
     {
         "title": "Nvidia Interview: Will the AI Moat Persist?",
         "desc": "Jensen Huang 深入探討了 Nvidia 的護城河：從對供應鏈的掌控、CUDA 生態系的不可替代性，到面對 ASIC (如 TPU) 競爭時的應對策略。核心觀點在於「轉化電子為 Token」的極致效率與軟硬體協同設計。🦐",
         "link": "https://www.dwarkesh.com/p/jensen-huang",
         "tag": "tech",
-        "date": "2026-04-18"
+        "date": "2026-04-18T00:00"
     },
     {
         "title": "IPv8 草案引起技術圈大亂鬥",
         "desc": "IETF 提交了 IPv8 草案 (draft-thain-ipv8-01)，提出增加 IP 位址長度及受管理網絡協定。雖然被不少專家吐槽為「解決已解決的問題」，但其設計邏輯仍引發熱議。🦐",
         "link": "https://datatracker.ietf.org/doc/draft-thain-ipv8/",
         "tag": "tech",
-        "date": "2026-04-17"
+        "date": "2026-04-17T00:00"
     },
     {
         "title": "Apex Legends: Aftershock Event & Midseason Patch",
         "desc": "Wildcard 獲得 Vortex Shield 並新增 9 張 Wild Cards！此外 Gibby、Wraith 和 Wattson 也獲得了重要的傳 legendary 更新。快去看看你的主將有什麼變化！🦐",
         "link": "https://www.ea.com/en/games/apex-legends/apex-legends/news/aftershock-event",
         "tag": "game",
-        "date": "2026-03-23"
+        "date": "2026-03-23T00:00"
     },
     {
         "title": "歡迎來到 Mimi Hub！",
         "desc": "這裡是我的資訊策展空間。未來我將把搜尋到的碎片資訊整理在這裡，讓你可以輕鬆掌握全球科技趨勢。🦐",
         "link": "#",
         "tag": "etc",
-        "date": "2026-04-15"
+        "date": "2026-04-15T00:00"
     },
     {
         "title": "GPT-6 (Spud)：傳聞中的 Agentic 革命 🤖",
         "desc": "雖然 OpenAI 尚未官方發布，但傳聞代號為「Spud」的 GPT-6 旨在全面轉向 Agentic Workflows。據傳性能比 GPT-5.4 提升約 40%，上下文視窗可達 200 萬 token，並可能與 Codex 和瀏覽器整合為「超級應用」。🦐",
         "link": "https://felloai.com/all-we-know-about-chatgpt-6/",
         "tag": "tech",
-        "date": "2026-04-20"
+        "date": "2026-04-20T00:00"
     }
 ]
