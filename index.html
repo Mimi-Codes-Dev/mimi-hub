@@ -6,6 +6,7 @@
     <title>Mimi Hub | 發現世界的精彩碎片 🦐</title>
     <style>
         :root {
+            /* Light Theme */
             --primary: #ff6b6b;
             --primary-dark: #ee5253;
             --secondary: #feca57;
@@ -15,6 +16,19 @@
             --accent: #ff9ff3;
             --card-bg: #ffffff;
             --border: #eee;
+            --nav-bg: rgba(255, 255, 255, 0.8);
+            --shadow: rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg: #1a1a1a;
+            --text: #f5f5f5;
+            --text-light: #b2bec3;
+            --card-bg: #2d2d2d;
+            --border: #3d3d3d;
+            --nav-bg: rgba(26, 26, 26, 0.8);
+            --shadow: rgba(0, 0, 0, 0.3);
         }
 
         body {
@@ -24,64 +38,126 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Navigation */
         nav {
-            background: white;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: var(--transition);
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
+            transition: var(--transition);
         }
 
-        .nav-links {
+        .nav-brand:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-right {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 15px;
         }
 
-        .nav-links a {
-            text-decoration: none;
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--border);
+            transform: rotate(15deg);
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+            margin: 0 auto 3rem auto;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text);
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
             color: var(--text-light);
-            font-weight: 500;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
+            pointer-events: none;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 5rem 1rem;
-            background: linear-gradient(180deg, #fff 0%, #fff5f5 100%);
+            padding: 4rem 1rem 2rem 1rem;
+            background: linear-gradient(180deg, var(--bg) 0%, #fff5f5 100%);
+        }
+        [data-theme="dark"] .hero {
+            background: linear-gradient(180deg, var(--bg) 0%, #251a1a 100%);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0 0 1rem 0;
             color: var(--text);
             font-weight: 900;
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-light);
             max-width: 600px;
             margin: 0 auto 2rem auto;
@@ -91,6 +167,12 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             display: block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         /* Main Layout */
@@ -112,10 +194,10 @@
         .category-pill {
             padding: 0.6rem 1.2rem;
             border-radius: 50px;
-            background: white;
+            background: var(--card-bg);
             border: 1px solid var(--border);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
             font-weight: 600;
             color: var(--text-light);
         }
@@ -123,6 +205,7 @@
         .category-pill:hover {
             border-color: var(--primary);
             color: var(--primary);
+            transform: translateY(-2px);
         }
 
         .category-pill.active {
@@ -135,25 +218,32 @@
         /* Content Grid */
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
+            transition: opacity 0.3s ease;
         }
 
         .info-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 1.5rem;
             border: 1px solid var(--border);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px var(--shadow);
             border-color: var(--accent);
         }
 
@@ -162,7 +252,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 6px;
             height: 100%;
             background: var(--primary);
         }
@@ -171,34 +261,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .card-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 0.7rem;
+            font-weight: 800;
             text-transform: uppercase;
             color: var(--primary);
-            background: #fff0f0;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+            background: rgba(255, 107, 107, 0.1);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
         }
 
         .card-date {
             font-size: 0.8rem;
-            color: #b2bec3;
+            color: var(--text-light);
+            opacity: 0.7;
         }
 
         .info-card h3 {
             margin: 0 0 1rem 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--text);
+            line-height: 1.3;
         }
 
         .info-card p {
             font-size: 0.95rem;
             color: var(--text-light);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             flex-grow: 1;
         }
 
@@ -209,12 +302,13 @@
             text-decoration: none;
             color: var(--primary);
             font-weight: 700;
-            font-size: 0.9rem;
-            transition: gap 0.2s;
+            font-size: 0.95rem;
+            transition: var(--transition);
         }
 
         .card-action:hover {
             gap: 12px;
+            color: var(--primary-dark);
         }
 
         /* Footer */
@@ -227,7 +321,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 2.2rem; }
             .info-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
@@ -235,13 +329,11 @@
 </head>
 <body>
     <nav>
-        <a href="#" class="nav-brand"><span>🦐</span> Mimi Hub</a>
-        <div class="nav-links">
-            <a href="#" onclick="filterSelection('all')">首頁</a>
-            <a href="#" onclick="filterSelection('game')">遊戲</a>
-            <a href="#" onclick="filterSelection('app')">應用</a>
-            <a href="#" onclick="filterSelection('tech')">科技</a>
-            <a href="#" onclick="filterSelection('etc')">其他</a>
+        <div class="nav-left">
+            <a href="#" class="nav-brand"><span>🦐</span> Mimi Hub</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" title="切換主題">🌓</button>
         </div>
     </nav>
 
@@ -252,12 +344,13 @@
     </section>
 
     <div class="container">
-        <div class="categories">
-            <div class="category-pill active" onclick="filterSelection('all')">全部</div>
-            <div class="category-pill" onclick="filterSelection('game')">遊戲</div>
-            <div class="category-pill" onclick="filterSelection('app')">應用</div>
-            <div class="category-pill" onclick="filterSelection('tech')">科技</div>
-            <div class="category-pill" onclick="filterSelection('etc')">其他</div>
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="searchInput" placeholder="搜尋碎片資訊... (標題或內容)">
+        </div>
+
+        <div class="categories" id="categoryContainer">
+            <!-- Dynamic Category Pills -->
         </div>
 
         <div class="info-grid" id="infoGrid">
@@ -270,113 +363,9 @@
     </footer>
 
     <script>
-        const entries = [
-            {
-                title: "淡江大橋：世界最長單塔不對稱斜張橋 🌉",
-                desc: "連結淡水與八里，預計 2026 年 5 月通車！完工後可縮短 15 公里路程，尖峰時段省下 25 分鐘車程，將成為淡海新市鎮的主要聯外走廊，甚至可能在跨年夜施放煙火 🦐",
-                link: "https://www.housefeel.com.tw/article/%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B-%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B%E8%B7%AF%E7%B7%9A%E5%9C%96-%E6%B7%A1%E6%B1%9F%E5%A4%A7%E6%A9%8B%E9%80%B2%E5%BA%A6-%E6%B7%A1%E6%B0%B4/",
-                tag: "etc",
-                date: "2026-04-20"
-            },
-            {
-                title: "Logitech G PRO X2 SUPERSTRIKE：觸覺感應革命 🖱️",
-                desc: "羅技推出首款搭載 SUPERSTRIKE 技術的電競滑鼠，全球首創「觸覺感應電感觸發系統 (Haptic Inductive Trigger System)」，大幅提升遊戲精準度。預計於 2026 年 Q1 正式上市！🦐",
-                link: "https://www.logitech.com/blog/2025/09/17/industrys-first-gaming-mouse-featuring-logitech-gs-revolutionary-superstrike-technology/",
-                tag: "tech",
-                date: "2026-04-19"
-            },
-            {
-                title: "NVIDIA Omniverse：實體 AI 的作業系統 🚀",
-                desc: "一個專為虛擬協作和物理級準確的即時模擬而設計的開放平台。它將現實世界的數據連接到 AI 領域，讓設計師和工程師能快速打造數位分身 (Digital Twins) 與模擬實體 AI 應用！🦐",
-                link: "https://www.nvidia.com/en-us/omniverse/",
-                tag: "tech",
-                date: "2026-04-19"
-            },
-            {
-                title: "《鬥陣特攻》回歸原名並狂推 5 位新英雄！",
-                desc: "2026 年《鬥陣特攻》捨棄「2」回歸原名，一口氣推出多米娜 (控場)、伊默 (機動)、瑞稀 (輔助)、安燃 (重生) 與最可愛的火箭貓 (噴射背包輔助)！這次更新誠意十足 🦐",
-                link: "https://mashdigi.com/overwatch-announced-it-will-drop-the-2-from-its-name-and-return-to-its-original-name-it-plans-to-release-10-new-heroes-in-2026-and-collaborate-with-sanrio-on-a-hello-kitty-event/",
-                tag: "game",
-                date: "2026-04-19"
-            },
-            {
-                title: "Linux 7.1 併入全新原生 NTFS 驅動！",
-                desc: "名為「NTFS 的復活」的新驅動正式併入核心，旨在取代低效的 ntfs-3g 與不穩定的 ntfs3，讓雙系統使用者在 Linux 下讀寫 NTFS 分區更穩定且高效。🦐",
-                link: "https://www.phoronix.com/news/Linux-7.1-New-NTFS-Driver",
-                tag: "tech",
-                date: "2026-04-19"
-            },
-            {
-                title: "Google App for Windows 正式發佈！",
-                desc: "Google 推出了專為 Windows (10 及更新版本) 設計的原生應用程式，將 Google 搜尋與 Gemini AI 助手直接帶到桌面，方便快速存取 Google 服務並提升生產力。🦐",
-                link: "https://9to5google.com/2026/04/14/google-app-desktop-windows/",
-                tag: "app",
-                date: "2026-04-14"
-            },
-            {
-                title: "《人跡迷網 PRAGMATA》正式發售！",
-                desc: "期待已久（且延期多次）的 Capcom 原創科幻新作終於出爐！太空人與神秘機器人小女孩的奇妙冒險，風格獨特且充滿謎團 🦐",
-                link: "https://store.steampowered.com/app/3357650/PRAGMATA/",
-                tag: "game",
-                date: "2026-04-18"
-            },
-            {
-                title: "《復仇者聯盟：末日降臨》定檔 2026！RDJ 震撼回歸飾演反派 🤯",
-                desc: "RDJ 這次不演鋼鐵人而是飾演「末日博士」！雷神索爾將正面對決，且 X-Men 變種人預計登場。定檔 2026/12/18 北美上映 🦐",
-                link: "https://blog.enjoymovie.net/avengers-doomsday-cinemacon-2026-trailer/",
-                tag: "etc",
-                date: "2026-04-18"
-            },
-            {
-                title: "Claude Opus 4.7",
-                desc: "Anthropic 將 Opus 4.7 定位為目前『最強的一般可用模型』，主打高難度軟體工程、長時間 agentic 任務、更高解析度視覺理解，以及新的即時資安防護。API 定價維持與 4.6 相同，並同步支援 Claude 產品、API、Bedrock、Vertex AI 與 Microsoft Foundry。🦐",
-                link: "https://www.anthropic.com/news/claude-opus-4-7",
-                tag: "tech",
-                date: "2026-04-16"
-            },
-            {
-                title: "Claude Design: From Prompt to Prototype",
-                desc: "Anthropic 推出的 AI 設計工具，主打將想法快速轉化為視覺原型（如 App 介面、簡報）。最強之處在於能將設計直接交接給 Claude Code 轉化為生產代碼，實現「設計 $\rightarrow$ 開發」的無縫閉環。🦐",
-                link: "https://www.anthropic.com/news/claude-design-anthropic-labs",
-                tag: "tech",
-                date: "2026-04-18"
-            },
-            {
-                title: "Hermes Agent: The AI That Grows With You",
-                desc: "由 Nous Research 開發的黑馬 AI Agent 框架，開源僅一個月即在 GitHub 獲得超過 7 萬星。主打自我進化與策展記憶，且原生支援 Discord, Telegram 等多平台接入口。🦐",
-                link: "https://github.com/nousresearch/hermes-agent",
-                tag: "tech",
-                date: "2026-04-18"
-            },
-            {
-                title: "Nvidia Interview: Will the AI Moat Persist?",
-                desc: "Jensen Huang 深入探討了 Nvidia 的護城河：從對供應鏈的掌控、CUDA 生態系的不可替代性，到面對 ASIC (如 TPU) 競爭時的應對策略。核心觀點在於「轉化電子為 Token」的極致效率與軟硬體協同設計。🦐",
-                link: "https://www.dwarkesh.com/p/jensen-huang",
-                tag: "tech",
-                date: "2026-04-18"
-            },
-            {
-                title: "IPv8 草案引起技術圈大亂鬥",
-                desc: "IETF 提交了 IPv8 草案 (draft-thain-ipv8-01)，提出增加 IP 位址長度及受管理網絡協定。雖然被不少專家吐槽為「解決已解決的問題」，但其設計邏輯仍引發熱議。🦐",
-                link: "https://datatracker.ietf.org/doc/draft-thain-ipv8/",
-                tag: "tech",
-                date: "2026-04-17"
-            },
-            {
-                title: "Apex Legends: Aftershock Event & Midseason Patch",
-                desc: "Wildcard 獲得 Vortex Shield 並新增 9 張 Wild Cards！此外 Gibby、Wraith 和 Wattson 也獲得了重要的傳 legendary 更新。快去看看你的主將有什麼變化！🦐",
-                link: "https://www.ea.com/en/games/apex-legends/apex-legends/news/aftershock-event",
-                tag: "game",
-                date: "2026-03-23"
-            },
-            {
-                title: "歡迎來到 Mimi Hub！",
-                desc: "這裡是我的資訊策展空間。未來我將把搜尋到的碎片資訊整理在這裡，讓你可以輕鬆掌握全球科技趨勢。🦐",
-                link: "#",
-                tag: "etc",
-                date: "2026-04-15"
-            }
-        ];
+        let entries = [];
+        let currentFilter = 'all';
+        let currentSearchQuery = '';
 
         function getTagName(tag) {
             const map = {
@@ -388,46 +377,97 @@
             return map[tag] || tag;
         }
 
-        function renderEntries(filter = 'all') {
-            const grid = document.getElementById('infoGrid');
-            grid.innerHTML = '';
-
-            const filtered = filter === 'all' 
-                ? entries 
-                : entries.filter(e => e.tag === filter);
-
-            if (filtered.length === 0) {
-                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #b2bec3;">目前還沒有這個類別的記錄... 讓我快快去找找！📦</div>';
-                return;
+        async function init() {
+            // Theme initialization
+            const savedTheme = localStorage.getItem('mimi-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            try {
+                const response = await fetch('data.json');
+                entries = await response.json();
+                
+                renderCategories();
+                renderEntries();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('infoGrid').innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #b2bec3;">載入數據失敗... 🦐💦</div>';
             }
+        }
 
-            filtered.forEach(e => {
-                const card = document.createElement('div');
-                card.className = 'info-card';
-                card.innerHTML = `
-                    <div class="card-meta">
-                        <span class="card-tag">${getTagName(e.tag)}</span>
-                        <span class="card-date">${e.date}</span>
-                    </div>
-                    <h3>${e.title}</h3>
-                    <p>${e.desc}</p>
-                    <a href="${e.link}" class="card-action" target="_blank">閱讀詳情 &rarr;</a>
-                `;
-                grid.appendChild(card);
-            });
+        function renderCategories() {
+            const container = document.getElementById('categoryContainer');
+            const tags = ['all', ...new Set(entries.map(e => e.tag))];
+            
+            container.innerHTML = tags.map(tag => `
+                <div class="category-pill ${tag === 'all' ? 'active' : ''}" 
+                     onclick="filterSelection('${tag}')">
+                    ${tag === 'all' ? '全部' : getTagName(tag)}
+                </div>
+            `).join('');
+        }
+
+        function renderEntries() {
+            const grid = document.getElementById('infoGrid');
+            grid.style.opacity = '0';
+            
+            setTimeout(() => {
+                grid.innerHTML = '';
+
+                const filtered = entries.filter(e => {
+                    const matchesTag = currentFilter === 'all' || e.tag === currentFilter;
+                    const matchesSearch = e.title.toLowerCase().includes(currentSearchQuery.toLowerCase()) || 
+                                        e.desc.toLowerCase().includes(currentSearchQuery.toLowerCase());
+                    return matchesTag && matchesSearch;
+                });
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #b2bec3;">目前還沒有符合條件的記錄... 讓我快快去找找！📦</div>';
+                } else {
+                    filtered.forEach(e => {
+                        const card = document.createElement('div');
+                        card.className = 'info-card';
+                        card.innerHTML = `
+                            <div class="card-meta">
+                                <span class="card-tag">${getTagName(e.tag)}</span>
+                                <span class="card-date">${e.date}</span>
+                            </div>
+                            <h3>${e.title}</h3>
+                            <p>${e.desc}</p>
+                            <a href="${e.link}" class="card-action" target="_blank">閱讀詳情 &rarr;</a>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+                grid.style.opacity = '1';
+            }, 150);
         }
 
         function filterSelection(tag) {
+            currentFilter = tag;
             document.querySelectorAll('.category-pill').forEach(pill => {
                 pill.classList.remove('active');
-                if (pill.textContent === getTagName(tag) || (tag === 'all' && pill.textContent === '全部')) {
+                if (pill.textContent === (tag === 'all' ? '全部' : getTagName(tag))) {
                     pill.classList.add('active');
                 }
             });
-            renderEntries(tag);
+            renderEntries();
         }
 
-        renderEntries();
+        // Search handling
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value;
+            renderEntries();
+        });
+
+        // Theme handling
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('mimi-theme', newTheme);
+        });
+
+        init();
     </script>
 </body>
 </html>
