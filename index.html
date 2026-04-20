@@ -418,7 +418,7 @@
                     const matchesSearch = e.title.toLowerCase().includes(currentSearchQuery.toLowerCase()) || 
                                         e.desc.toLowerCase().includes(currentSearchQuery.toLowerCase());
                     return matchesTag && matchesSearch;
-                });
+                }).sort((a, b) => new Date(b.date) - new Date(a.date));
 
                 if (filtered.length === 0) {
                     grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #b2bec3;">目前還沒有符合條件的記錄... 讓我快快去找找！📦</div>';
@@ -429,7 +429,7 @@
                         card.innerHTML = `
                             <div class="card-meta">
                                 <span class="card-tag">${getTagName(e.tag)}</span>
-                                <span class="card-date">${e.date}</span>
+                                <span class="card-date">加入於 ${e.date}</span>
                             </div>
                             <h3>${e.title}</h3>
                             <p>${e.desc}</p>
