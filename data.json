@@ -1,5 +1,12 @@
 [
     {
+        "title": "NVIDIA NIM 提供免費 API Key 給開發者 🚀",
+        "desc": "NVIDIA 正式開放其 NIM (Inference Microservices) 平台，讓開發者可以免費獲取 API Key 來調用包括 Kimi-k2、Minimax 在內的頂尖 AI 模型。這讓開發者能更低門檻地將高效能模型整合進自己的應用中。🦐",
+        "link": "https://build.nvidia.com/",
+        "tag": "tech",
+        "date": "2026-04-21T00:00"
+    },
+    {
         "title": "OpenAI ChatGPT Images 2.0：圖像生成的推理革命 🎨",
         "desc": "OpenAI 發佈全新圖像模型 Images 2.0！最強之處在於引入了「推理能力」與「聯網搜尋」，能精準生成 2K 解析度圖像，且在文字渲染（含非拉丁字母）、UI 元素及複雜排版（如雜誌、漫畫）上有突破性進步。支援單次提示生成 8 張一致性圖片。🦐",
         "link": "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
