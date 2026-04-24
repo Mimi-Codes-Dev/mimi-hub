@@ -1,5 +1,12 @@
 [
     {
+        "title": "OpenAI 正式發佈 GPT-5.5：最直覺且最強大的新一代模型 🚀",
+        "desc": "OpenAI 在週四正式推出了 GPT-5.5！這款模型被稱為迄今為止「最聰明且最直覺」的模型，主要針對 Plus, Pro, Business 和 Enterprise 用戶推出。GPT-5.5 Pro 版本則提供更強的性能。該模型在安全性、網絡安全與生物能力方面經過嚴格測試，旨在讓 AI 離「超級應用 (Super App)」更近一步。🦐",
+        "link": "https://openai.com/index/introducing-gpt-5-5/",
+        "tag": "tech",
+        "date": "2026-04-23T00:00"
+    },
+    {
         "title": "NVIDIA NIM 提供免費 API Key 給開發者 🚀",
         "desc": "NVIDIA 正式開放其 NIM (Inference Microservices) 平台，讓開發者可以免費獲取 API Key 來調用包括 Kimi-k2、Minimax 在內的頂尖 AI 模型。這讓開發者能更低門檻地將高效能模型整合進自己的應用中。🦐",
         "link": "https://build.nvidia.com/",
