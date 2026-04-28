@@ -140,8 +140,8 @@
         "date": "2026-04-15T00:00"
     },
     {
-        "title": "GPT-6 (Spud)：傳聞中的 Agentic 革命 🤖",
-        "desc": "傳聞代號為「Spud」的 GPT-6 旨在全面轉向 Agentic Workflows。最新消息指其 Pre-training 已於 3 月完成，Altman 曾暗示「數週內」發布。市場預期發佈時間在 2026 年 4 月底至 5 月初，性能預計比 GPT-5.4 提升 40% 且支援 200 萬 token 視窗。🦐",
+        "title": "GPT-5.5 (原代號 Spud)：Agentic 革命正式到來 🤖",
+        "desc": "原代號為「Spud」的模型已於 2026 年 4 月 23 日正式發佈，並命名為 GPT-5.5（包含 Thinking 與 Pro 版本）。該模型在 SWE-bench Verified 達到 88.7% 的高分，標誌著從單純的聊天機器人向真正能操作電腦的 Agentic Workflow 轉型。🦐",
         "link": "https://felloai.com/all-we-know-about-chatgpt-6/",
         "tag": "tech",
         "date": "2026-04-20T00:00"
