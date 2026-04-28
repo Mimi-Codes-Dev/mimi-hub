@@ -7,6 +7,20 @@
         "date": "2026-04-23T00:00"
     },
     {
+        "title": "4 月 AI 模型大爆發：Claude 4, GPT-5 Turbo 與 Llama 4 陸續登場 🚀",
+        "desc": "進入 4 月模型更迭週期，Claude 4、GPT-5 Turbo、Llama 4、Qwen 3 及 Gemini 2.5 已陸續發佈。其中 GLM-5.1 在 SWE-Bench Pro 基準測試中宣稱超越頂尖商業模型，而 Gemma 4 31B 則展現出極高參數效能比。🦐",
+        "link": "https://openai.com",
+        "tag": "tech",
+        "date": "2026-04-27T00:00"
+    },
+    {
+        "title": "FinRL-X 3.0：量化交易邁向 AI-Native 模組化架構 📈",
+        "desc": "FinRL-X 3.0 正式推出，將量化交易模型全面模組化，並引入 `adaptive_rotation` (自適應輪轉) 策略。這標誌著量化交易正從單體 DRL 模型轉移至更靈活的 AI-Native 模組化架構。🦐",
+        "link": "https://github.com/AI4Finance-Foundation/FinRL-Trading",
+        "tag": "tech",
+        "date": "2026-04-27T00:00"
+    },
+    {
         "title": "NVIDIA NIM 提供免費 API Key 給開發者 🚀",
         "desc": "NVIDIA 正式開放其 NIM (Inference Microservices) 平台，讓開發者可以免費獲取 API Key 來調用包括 Kimi-k2、Minimax 在內的頂尖 AI 模型。這讓開發者能更低門檻地將高效能模型整合進自己的應用中。🦐",
         "link": "https://build.nvidia.com/",
@@ -46,7 +60,7 @@
         "desc": "2026 年《鬥陣特攻》捨棄「2」回歸原名，一口氣推出多米娜 (控場)、伊默 (機動)、瑞稀 (輔助)、安燃 (重生) 與最可愛的火箭貓 (噴射背包輔助)！這次更新誠意十足 🦐",
         "link": "https://mashdigi.com/overwatch-announced-it-will-drop-the-2-from-its-name-and-return-to-its-original-name-it-plans-to-release-10-new-heroes-in-2026-and-collaborate-with-sanrio-on-a-hello-kitty-event/",
         "tag": "game",
-        "date": "2026-04-19T00:00"
+        "date": "2026-03-23T00:00"
     },
     {
         "title": "Linux 7.1 併入全新原生 NTFS 驅動！",
@@ -85,7 +99,7 @@
     },
     {
         "title": "Claude Design: From Prompt to Prototype",
-        "desc": "Anthropic 推出的 AI 設計工具，主打將想法快速轉化為視覺原型（如 App 介面、簡報）。最強之處在於能將設計直接交接給 Claude Code 轉化為生產代碼，實現「設計 $\rightarrow$ 開發」的無縫閉環。🦐",
+        "desc": "Anthropic 推出的 AI 設計工具，主打將想法快速轉化為視覺原型（如 App 介面、簡報）。最強之處在於能將設計直接交接給 Claude Code 轉化為生產代碼，實現「設計 $\\rightarrow$ 開發」的無縫閉環。🦐",
         "link": "https://www.anthropic.com/news/claude-design-anthropic-labs",
         "tag": "tech",
         "date": "2026-04-18T00:00"
