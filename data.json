@@ -63,13 +63,6 @@
         "date": "2026-03-23T00:00"
     },
     {
-        "title": "Linux 7.1 併入全新原生 NTFS 驅動！",
-        "desc": "名為「NTFS 的復活」的新驅動正式併入核心，旨在取代低效的 ntfs-3g 與不穩定的 ntfs3，讓雙系統使用者在 Linux 下讀寫 NTFS 分區更穩定且高效。🦐",
-        "link": "https://www.phoronix.com/news/Linux-7.1-New-NTFS-Driver",
-        "tag": "tech",
-        "date": "2026-04-19T00:00"
-    },
-    {
         "title": "Google App for Windows 正式發佈！",
         "desc": "Google 推出了專為 Windows (10 及更新版本) 設計的原生應用程式，將 Google 搜尋與 Gemini AI 助手直接帶到桌面，方便快速存取 Google 服務並提升生產力。🦐",
         "link": "https://9to5google.com/2026/04/14/google-app-desktop-windows/",
