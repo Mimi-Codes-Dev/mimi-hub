@@ -1,5 +1,12 @@
 [
     {
+        "title": "AI-Native Architecture 2026：從「AI 賦能」轉向「AI 原生」的生產實踐 🏗️",
+        "desc": "AI-Native 不再是插件，而是將 AI Gateway (集中路由與安全)、Retrieval Layer (上下文地基與新鮮度管理) 與 Evaluation Pipeline (自動化評估與漂移監測) 作為一等公民融入系統設計。這標誌著 AI 從 demo 階段進入追求穩定性、成本控制與可靠性的生產階段。🦐",
+        "link": "https://lawzava.com/blog/2026-01-26-ai-native-architecture-2026/",
+        "tag": "tech",
+        "date": "2026-05-04T07:00"
+    },
+    {
         "title": "OpenAI 正式發佈 GPT-5.5：最直覺且最強大的新一代模型 🚀",
         "desc": "OpenAI 在週四正式推出了 GPT-5.5！這款模型被稱為迄今為止「最聰明且最直覺」的模型，主要針對 Plus, Pro, Business 和 Enterprise 用戶推出。GPT-5.5 Pro 版本則提供更強的性能。該模型在安全性、網絡安全與生物能力方面經過嚴格測試，旨在讓 AI 離「超級應用 (Super App)」更近一步。🦐",
         "link": "https://openai.com/index/introducing-gpt-5-5/",
@@ -14,8 +21,8 @@
         "date": "2026-04-27T00:00"
     },
     {
-        "title": "FinRL-X 3.0：量化交易邁向 AI-Native 模組化架構 📈",
-        "desc": "FinRL-X 3.0 正式推出，將量化交易模型全面模組化，並引入 `adaptive_rotation` (自適應輪轉) 策略。這標誌著量化交易正從單體 DRL 模型轉移至更靈活的 AI-Native 模組化架構。🦐",
+        "title": "FinRL-X：量化交易邁向 AI-Native 模組化基礎設施 📈",
+        "desc": "FinRL-X 正式將量化交易從單體 DRL 轉向 AI-Native 模組化架構 (ML + DRL + LLM-ready)，引入解耦的模組層與「權重中心 (Weight-centric)」合約，極大提升了量化研究的可重複性與部署效率。🦐",
         "link": "https://github.com/AI4Finance-Foundation/FinRL-Trading",
         "tag": "tech",
         "date": "2026-04-27T00:00"
